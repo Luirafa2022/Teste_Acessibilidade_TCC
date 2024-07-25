@@ -1,0 +1,229 @@
+:root {
+    --purple: #8A2BE2;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #F0F0F0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--black);
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--purple);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    background-color: var(--purple);
+    border: none;
+    color: var(--white);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+h2 {
+    color: var(--purple);
+    border-bottom: 2px solid var(--purple);
+    padding-bottom: 10px;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#red { background-color: #FF0000; }
+#green { background-color: #00FF00; }
+#blue { background-color: #0000FF; }
+#yellow { background-color: #FFFF00; }
+#purple { background-color: #800080; }
+#orange { background-color: #FFA500; }
+
+/* Alto Contraste */
+.high-contrast {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.high-contrast header {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.high-contrast h2 {
+    color: var(--white);
+    border-bottom-color: var(--white);
+}
+
+.high-contrast button {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.high-contrast button:hover {
+    background-color: var(--light-gray);
+    color: var(--black);
+}
+
+.high-contrast nav a {
+    color: var(--black);
+}
+
+.high-contrast nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o slider de tamanho de fonte */
+.font-size-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.font-size-label {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.font-size-label.small {
+    font-size: 14px;
+}
+
+.font-size-label.large {
+    font-size: 22px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--purple);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--purple);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Estilos para o select de tipo de daltonismo */
+select#colorblind-type {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--purple);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+select#colorblind-type:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--purple);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .color-box {
+        width: 80px;
+        height: 80px;
+    }
+}

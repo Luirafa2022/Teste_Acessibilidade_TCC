@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Daltônico - Demonstração</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Modo Daltônico</h1>
+        <nav>
+            <a href="index.html">Modo Daltônico</a>
+            <a href="alto-contraste.html">Alto Contraste</a>
+            <a href="tamanho-fonte.html">Tamanho da Fonte</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Selecione o Tipo de Daltonismo</h2>
+        <select id="colorblind-type" onchange="changeColorblindType()">
+            <option value="normal">Cores Padrão</option>
+            <optgroup label="Formas Leves">
+                <option value="protanomaly">Protanomalia (Vermelho fraco)</option>
+                <option value="deuteranomaly">Deuteranomalia (Verde fraco)</option>
+                <option value="tritanomaly">Tritanomalia (Azul fraco)</option>
+            </optgroup>
+            <optgroup label="Formas Severas">
+                <option value="protanopia">Protanopia (Sem vermelho)</option>
+                <option value="deuteranopia">Deuteranopia (Sem verde)</option>
+                <option value="tritanopia">Tritanopia (Sem azul)</option>
+            </optgroup>
+            <optgroup label="Monocromacia">
+                <option value="achromatomaly">Acromatomalia (Quase sem cores)</option>
+                <option value="achromatopsia">Acromatopsia (Sem cores)</option>
+            </optgroup>
+        </select>
+        
+        <h2>O que é o modo daltônico?</h2>
+        <p>O modo daltônico é uma funcionalidade especial que ajuda pessoas com daltonismo a visualizar melhor as cores em uma interface digital. Ele simula como as cores são percebidas por pessoas com diferentes tipos de daltonismo.</p>
+        
+        <h2>Tipos de Daltonismo</h2>
+        <ul>
+            <li><strong>Protanomalia/Protanopia:</strong> Dificuldade em perceber o vermelho</li>
+            <li><strong>Deuteranomalia/Deuteranopia:</strong> Dificuldade em perceber o verde</li>
+            <li><strong>Tritanomalia/Tritanopia:</strong> Dificuldade em perceber o azul</li>
+            <li><strong>Acromatopsia:</strong> Ausência total de percepção de cores</li>
+            <li><strong>Acromatomalia:</strong> Percepção muito limitada de cores</li>
+        </ul>
+        
+        <h2>Demonstração de Cores</h2>
+        <p>Use o seletor acima para ver como as cores abaixo mudam para diferentes tipos de daltonismo:</p>
+        <div class="color-palette">
+            <div class="color-box" id="red">Vermelho</div>
+            <div class="color-box" id="green">Verde</div>
+            <div class="color-box" id="blue">Azul</div>
+            <div class="color-box" id="yellow">Amarelo</div>
+            <div class="color-box" id="purple">Roxo</div>
+            <div class="color-box" id="orange">Laranja</div>
+        </div>
+    </div>
+    <script src="accessibility.js"></script>
+</body>
+</html>
